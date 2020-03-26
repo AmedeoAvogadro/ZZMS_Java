@@ -1,7 +1,6 @@
 import java.util.*;
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.regex.*;
 
 public class Count {
     static int max = 20;
@@ -9,15 +8,15 @@ public class Count {
 
     public static void main(String[] args) throws FileNotFoundException{
 
-        File in_f = new File("C:\\Users\\11096\\IdeaProjects\\ZZMS_Java\\src\\ori.txt");
+        File in_f = new File("article.txt");
         InputStream in_s = new FileInputStream(in_f);
         Scanner scanner = new Scanner(in_s);
 
-        File out_f = new File("C:\\Users\\11096\\IdeaProjects\\ZZMS_Java\\src\\new.txt");
+        File out_f = new File("data.txt");
         OutputStream out_s = new FileOutputStream(out_f);
         PrintWriter printWriter = new PrintWriter(out_s);
 
-        Pattern pattern = Pattern.compile("[qwertyuiopasdfghjklzxcvbnm]$");
+        Pattern pattern = Pattern.compile("[QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm]$");
         Pattern pat = Pattern.compile("[']");
         Matcher matcher;
         Matcher mat;
